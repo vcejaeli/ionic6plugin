@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Geolocation } from '@capacitor/geolocation';
+import { Haptics } from '@capacitor/haptics';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,18 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor() {
 
+  }
+
+  printCurrentPosition = async () => {
+    const coordinates = await Geolocation.getCurrentPosition();
+  
+    console.log('Current position:', coordinates);
+  };  
+
+  hapticsVibrate = async () => {
+    alert('hello');
+    await Haptics.vibrate();
+  };
 }

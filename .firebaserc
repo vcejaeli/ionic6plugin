@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "el-generico": {
+      "hosting": {
+        "app": [
+          "el-generico"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "el-generico"
+  }
+}
